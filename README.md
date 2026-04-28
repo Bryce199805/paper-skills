@@ -34,11 +34,21 @@ The portable core is `skills/*/SKILL.md`. Tool-specific files are adapters.
 
 ## Installation
 
-Replace `<owner>/<repo>` with the published GitHub repository.
+Repository:
+
+```text
+https://github.com/Bryce199805/paper-skills
+```
 
 ### Codex
 
-Use the Codex plugin flow and install this repository as a plugin. The Codex manifest is:
+Install this repository through the Codex plugin flow:
+
+```text
+git@github.com:Bryce199805/paper-skills.git
+```
+
+The Codex manifest is:
 
 ```text
 .codex-plugin/plugin.json
@@ -59,7 +69,13 @@ paper-review
 
 ### Claude Code
 
-Install as a Claude plugin from the repository. The Claude manifest is:
+Install as a Claude plugin from the repository:
+
+```text
+https://github.com/Bryce199805/paper-skills
+```
+
+The Claude manifest is:
 
 ```text
 .claude-plugin/plugin.json
@@ -76,7 +92,7 @@ skills/
 Install as a Gemini extension:
 
 ```bash
-gemini extensions install https://github.com/<owner>/<repo>
+gemini extensions install https://github.com/Bryce199805/paper-skills
 ```
 
 Gemini uses:
@@ -92,7 +108,7 @@ Add Paper Tools to the `plugin` array in `opencode.json`:
 
 ```json
 {
-  "plugin": ["paper-tools@git+https://github.com/<owner>/<repo>.git"]
+  "plugin": ["paper-tools@git+https://github.com/Bryce199805/paper-skills.git"]
 }
 ```
 
