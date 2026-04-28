@@ -7,8 +7,8 @@
     "email": "",
     "url": ""
   },
-  "homepage": "",
-  "repository": "",
+  "homepage": "https://github.com/Bryce199805/paper-skills",
+  "repository": "git@github.com:Bryce199805/paper-skills.git",
   "license": "MIT",
   "keywords": [
     "papers",
@@ -29,7 +29,7 @@
       "Read",
       "Interactive"
     ],
-    "websiteURL": "",
+    "websiteURL": "https://github.com/Bryce199805/paper-skills",
     "privacyPolicyURL": "",
     "termsOfServiceURL": "",
     "defaultPrompt": [

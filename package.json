@@ -4,5 +4,7 @@
   "type": "module",
   "main": ".opencode/plugins/paper-tools.js",
   "description": "Paper reading and peer-review skills for CV/ML/DL research workflows.",
+  "homepage": "https://github.com/Bryce199805/paper-skills",
+  "repository": "git@github.com:Bryce199805/paper-skills.git",
   "license": "MIT"
 }
