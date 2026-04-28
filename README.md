@@ -13,6 +13,16 @@ It is organized around portable `SKILL.md` skills, with small adapter manifests 
 
 ```text
 paper-tools/
+├── .agents/
+│   └── plugins/
+│       └── marketplace.json
+├── plugins/
+│   └── paper-tools/
+│       ├── .codex-plugin/
+│       │   └── plugin.json
+│       └── skills/
+│           ├── paper-read/
+│           └── paper-review/
 ├── skills/
 │   ├── paper-read/
 │   └── paper-review/
@@ -42,16 +52,24 @@ https://github.com/Bryce199805/paper-skills
 
 ### Codex
 
-Install this repository through the Codex plugin flow:
+Install this repository as a Codex plugin marketplace:
 
-```text
-git@github.com:Bryce199805/paper-skills.git
+```bash
+codex plugin marketplace add Bryce199805/paper-skills
 ```
 
-The Codex manifest is:
+Then install or enable the `paper-tools` plugin from Codex's plugin UI.
+
+The marketplace index is:
 
 ```text
-.codex-plugin/plugin.json
+.agents/plugins/marketplace.json
+```
+
+The Codex plugin manifest is:
+
+```text
+plugins/paper-tools/.codex-plugin/plugin.json
 ```
 
 It declares:
@@ -65,6 +83,14 @@ After installation, Codex should expose:
 ```text
 paper-read
 paper-review
+```
+
+For local development without the marketplace flow, link the skills directly:
+
+```bash
+mkdir -p ~/.codex/skills
+ln -s /absolute/path/to/paper-skills/skills/paper-read ~/.codex/skills/paper-read
+ln -s /absolute/path/to/paper-skills/skills/paper-review ~/.codex/skills/paper-review
 ```
 
 ### Claude Code
