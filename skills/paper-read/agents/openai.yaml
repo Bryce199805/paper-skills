@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Read"
+  short_description: "Read CV/ML/DL papers as structured research notes."
+  default_prompt: "Use $paper-read to read this local paper and produce a structured research note."

@@ -1,0 +1,21 @@
+{
+  "name": "paper-tools",
+  "description": "Paper reading and peer-review skills for CV/ML/DL research workflows.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Bryce",
+    "email": ""
+  },
+  "homepage": "",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "papers",
+    "research",
+    "computer-vision",
+    "machine-learning",
+    "knowledge-distillation",
+    "peer-review"
+  ]
+}

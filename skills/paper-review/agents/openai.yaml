@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Review"
+  short_description: "Review CV/ML/DL papers with structured comments."
+  default_prompt: "Use $paper-review to review this local paper."

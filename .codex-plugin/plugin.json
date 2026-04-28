@@ -1,0 +1,42 @@
+{
+  "name": "paper-tools",
+  "version": "0.1.0",
+  "description": "Tool-neutral skills for reading and reviewing CV/ML/DL research papers.",
+  "author": {
+    "name": "Bryce",
+    "email": "",
+    "url": ""
+  },
+  "homepage": "",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "papers",
+    "research",
+    "computer-vision",
+    "machine-learning",
+    "knowledge-distillation",
+    "peer-review"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Paper Tools",
+    "shortDescription": "Read and review CV/ML/DL papers.",
+    "longDescription": "A tool-neutral paper workflow skill bundle for reading papers and drafting peer-review analysis for computer vision, machine learning, deep learning, and knowledge distillation work. Codex and other compatible CLIs can install or load it.",
+    "developerName": "Bryce",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Interactive"
+    ],
+    "websiteURL": "",
+    "privacyPolicyURL": "",
+    "termsOfServiceURL": "",
+    "defaultPrompt": [
+      "Use $paper-read to read this local paper.",
+      "Use $paper-review to review this local paper.",
+      "Use $paper-review in collaborative mode."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

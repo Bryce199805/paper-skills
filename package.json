@@ -1,0 +1,8 @@
+{
+  "name": "paper-tools",
+  "version": "0.1.0",
+  "type": "module",
+  "main": ".opencode/plugins/paper-tools.js",
+  "description": "Paper reading and peer-review skills for CV/ML/DL research workflows.",
+  "license": "MIT"
+}
