@@ -7,6 +7,8 @@ description: Academic peer review of one local computer science paper, especiall
 
 Use this skill to review one paper at a time. The default domain is CV/ML/DL, with private reviewer-side awareness of knowledge distillation and heterogeneous KD when relevant.
 
+The default review style is method-centered. First understand the paper's problem formulation, method mechanism, formulas/theoretical claims, assumptions, architecture/objective design, and claim structure. Then identify weaknesses in the method itself and use theory, formulas, and experiments as evidence to validate, refute, or qualify those weaknesses. Do not make the review primarily a search for experimental omissions.
+
 ## Mode Selection
 
 Use `collaborative` mode by default when the user says "审稿", "review this paper", or gives a general review request.
@@ -31,16 +33,18 @@ Use `collaborative` mode when the user asks for:
 2. Prefer local `.pdf`, `.tex`, `.md`, or `.txt` files.
 3. Parse local files with `scripts/extract_paper_text.py` when available.
 4. Surface extraction limitations before review if the text is sparse, garbled, missing figures/tables/equations, or likely affected by two-column ordering.
-5. Apply the CV/ML/DL review criteria in `references/review-criteria.md`.
-6. Use ratings from `references/review-criteria.md`.
-7. Use templates from `references/output-templates.md`.
+5. Build a paper understanding report before making strong reviewer judgments.
+6. Apply the CV/ML/DL review criteria in `references/review-criteria.md`.
+7. Use ratings from `references/review-criteria.md`.
+8. Use templates from `references/output-templates.md`.
 
 ## Quick Mode
 
-In quick mode, produce both:
+In quick mode, produce:
 
-1. `Review Analysis Note` in Chinese for the reviewer.
-2. `Reviewer Comments` in English for submission.
+1. `Paper Understanding Report` in Chinese for the reviewer.
+2. `Initial Review Report` in Chinese for reviewer-side judgment.
+3. `Reviewer Comments` in English for submission.
 
 The formal comments must include:
 
@@ -59,15 +63,17 @@ In collaborative mode, do not draft final English reviewer comments in the first
 
 First produce:
 
-- Chinese review analysis note
+- `Paper Understanding Report` in Chinese
+- `Initial Review Report` in Chinese
 - preliminary ratings
-- candidate major concerns
-- candidate minor concerns
+- candidate method-centered major concerns
+- candidate experiment-supported concerns
 - uncertainty and missing information
 - reviewer decision points for the user
 
 Then stop and ask the user to confirm:
 
+- whether the paper understanding is accurate
 - which concerns should become major concerns
 - whether the preliminary ratings are appropriate
 - which `Overall Recommendation` direction to use
@@ -83,6 +89,8 @@ Only draft final English comments after the user confirms.
 - Avoid excessive hedging.
 - Avoid personal research preferences in formal comments.
 - Major concerns must clearly state the issue, why it affects the paper's claims or quality, and what evidence or revision would address it.
+- Prefer method-level criticism supported by experimental evidence over isolated complaints about missing experiments.
+- Treat formulas, derivations, theoretical assumptions, and objective functions as first-class evidence. Formula-level issues are strong review points when they weaken the claimed mechanism, optimization behavior, validity guarantee, or connection between method and experiments.
 
 ## Private KD Lens
 

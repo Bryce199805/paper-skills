@@ -44,6 +44,11 @@ Assess:
 - Are assumptions clear and reasonable?
 - Does the method follow from the stated problem?
 - Are there hidden weaknesses in the formulation, objective, or algorithm?
+- Is the claimed mechanism plausible given the architecture, loss, optimization, or inference procedure?
+- Are there mismatches between the motivation, method design, and what the method can actually guarantee?
+- Are the key formulas, losses, constraints, or theoretical propositions correct and relevant to the claimed mechanism?
+- Do derivations rely on hidden assumptions, unjustified approximations, or notation changes that alter the claim?
+- Does the optimized objective actually encourage the behavior the paper claims?
 
 ### Novelty / Originality
 
@@ -64,6 +69,9 @@ Assess:
 - Does the `ablation study` support the key claims?
 - Are qualitative results convincing?
 - Are missing experiments important enough to affect the claim?
+- Do the experiments directly test the method's core mechanism or only report outcome gains?
+- Do ablations isolate the proposed components from confounding implementation details?
+- Do experiments test the consequences of important theoretical or formula-level claims?
 
 ### Clarity / Presentation
 
@@ -109,6 +117,11 @@ Assess how confident the reviewer is in the evaluation, considering:
 
 Check:
 
+- method mechanism and claim consistency
+- formula/theory and claim consistency
+- derivation gaps, hidden assumptions, unjustified relaxations, or objective-claim mismatch
+- assumptions behind the architecture, objective, training strategy, or inference pipeline
+- whether experiments validate the mechanism rather than only the final metric
 - `baseline` fairness
 - `ablation study` completeness
 - `dataset` and metric suitability
@@ -118,3 +131,19 @@ Check:
 - `dataset leakage` risk
 - `cherry-picking` risk
 - robustness or out-of-domain evaluation when relevant
+
+## Concern Selection Guidance
+
+Prefer major concerns that expose a method-level or formula/theory-level weakness and then use experiments as supporting evidence. A strong major concern usually has this form:
+
+```text
+The method relies on assumption X or design choice Y. The paper does not justify why X/Y should hold in the target setting. The current experiments do not isolate or test this mechanism, so the main claim remains under-supported.
+```
+
+Formula/theory concerns are especially important when the paper uses equations, bounds, objectives, or derivations to justify novelty or validity. A strong formula-level concern usually has this form:
+
+```text
+The paper claims formula/objective X supports behavior Y, but the derivation assumes Z or optimizes a proxy that does not directly imply Y. Without clarifying this link or testing the predicted behavior empirically, the claimed mechanism remains unsupported.
+```
+
+Use pure experimental concerns as major concerns only when the missing evidence is necessary for the central claim, such as an omitted closest baseline, an ablation needed to validate the proposed mechanism, or an evaluation setting required by the paper's own motivation.

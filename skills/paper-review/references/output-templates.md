@@ -3,21 +3,37 @@
 ## Quick Mode Template
 
 ```markdown
-# Review Analysis Note
+# Paper Understanding Report
 
-## 1. 论文概述与审稿定位
+## 1. 论文基本问题与目标
 
-## 2. 作者声称的贡献
+## 2. 方法核心机制
 
-## 3. 证据与实验支撑
+## 3. 关键公式 / 理论依据 / 目标函数
 
-## 4. 潜在优点
+## 4. 关键设计与假设
 
-## 5. 主要问题判断
+## 5. 作者声称的贡献
 
-## 6. 次要问题判断
+## 6. 实验如何支撑论文主张
 
-## 7. 私人 KD / 研究启发
+## 7. 当前理解的不确定点
+
+# Initial Review Report
+
+## 1. 初步审稿定位
+
+## 2. 方法层面的主要优点
+
+## 3. 方法层面的主要漏洞
+
+## 4. 公式 / 理论层面的主要漏洞
+
+## 5. 实验对上述漏洞的支持或不足
+
+## 6. 次要问题
+
+## 7. 私人 KD / 研究启发（仅在相关时保留）
 
 ## 8. 初步评分与审稿倾向
 
@@ -57,31 +73,50 @@ Do not include an explicit recommendation sentence in `Summary`, `Major Concerns
 ## Collaborative Mode Stage 1 Template
 
 ```markdown
-# Review Analysis Note
+# Paper Understanding Report
 
-## 1. 论文概述与审稿定位
+## 1. 论文基本问题与目标
 
-## 2. 作者声称的贡献
+## 2. 方法核心机制
 
-## 3. 证据与实验支撑
+## 3. 关键公式 / 理论依据 / 目标函数
 
-## 4. 潜在优点
+## 4. 关键设计与假设
 
-## 5. Candidate Major Concerns
+## 5. 作者声称的贡献
 
-## 6. Candidate Minor Concerns
+## 6. 实验如何支撑论文主张
 
-## 7. 私人 KD / 研究启发
+## 7. 当前理解的不确定点
 
-## 8. Preliminary Ratings
+# Initial Review Report
 
-## 9. Missing Information / Uncertainty
+## 1. 初步审稿定位
 
-## 10. Reviewer Decision Points
+## 2. 方法层面的主要优点
+
+## 3. Candidate Method-Level Major Concerns
+
+## 4. Candidate Formula / Theory-Level Major Concerns
+
+## 5. Experiment Evidence for the Above Concerns
+
+## 6. Pure Experimental Gaps Not Yet Major Concerns
+
+## 7. Candidate Minor Concerns
+
+## 8. 私人 KD / 研究启发（仅在相关时保留）
+
+## 9. Preliminary Ratings
+
+## 10. Missing Information / Uncertainty
+
+## 11. Reviewer Decision Points
 ```
 
 End by asking the user to confirm:
 
+- Is the `Paper Understanding Report` accurate enough?
 - Which candidate concerns should be used as `Major Concerns`?
 - Are the preliminary ratings appropriate?
 - What `Overall Recommendation` direction should be selected?
@@ -101,6 +136,8 @@ Each `Major Concern` should include:
 - the issue
 - why it affects the paper
 - what evidence, analysis, or revision would address it
+
+Major concerns should usually be method-centered or formula/theory-centered and evidence-supported. Use experiments to show why the method or formula/theory concern is unresolved, rather than listing missing experiments without explaining the affected claim.
 
 Avoid:
 
